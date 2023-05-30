@@ -1,15 +1,10 @@
-#!usr/bin/python3
-
-def safe_print_list_integers(numbers_list, x=0):
-    count = 0
-
-    for i in range(min(x, len(numbers_list))):
-        try:
-            print("{:d}".format(numbers_list[i]), end='')
-            count += 1
-        except (TypeError, ValueError):
-            pass
-
-    print()
-    return count
-
+#!/usr/bin/python3
+def safe_print_division(a, b):
+    """Returns the division of a by b."""
+    try:
+        div = a / b
+    except (TypeError, ZeroDivisionError):
+        div = None
+    finally:
+        print("Inside result: {}".format(div))
+    return (div)
