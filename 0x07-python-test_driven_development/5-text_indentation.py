@@ -22,17 +22,17 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # Punctuation characters that require two new lines
+    #Punctuation characters that require two new lines
     punctuations = ".?:"
 
-    # Make a copy of the original text
+    #Make a copy of the original text
     processed_text = text
 
-    # Iterate over each punctuation character
+    #Iterate over each punctuation character
     for punctuation in punctuations:
-        # Replace each occurrence of the punctuation character with the character followed by two new lines
+        #Replace each occurrence of the punctuation character with the character followed by two new lines
         processed_text = processed_text.replace(punctuation, punctuation + "\n\n")
 
-    # Print the processed text without the trailing new lines
+    #Print the processed text without the trailing new lines
     print(processed_text, end="")
 
