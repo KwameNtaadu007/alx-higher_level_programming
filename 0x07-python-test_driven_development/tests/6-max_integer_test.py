@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module to find the max integer in a list
+This Module finds and returns the max integer in a list
 """
 
 def max_integer(lst=[]):
