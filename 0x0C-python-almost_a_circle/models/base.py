@@ -72,3 +72,22 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create an instance with all attributes already set using a dictionary.
+
+        Args:
+            **dictionary: Keyword arguments representing the attributes of the instance.
+
+        Returns:
+            Base: An instance of the class with the attributes set according to the dictionary.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy_instance = cls(1, 1)  # Create a dummy instance of Rectangle
+        elif cls.__name__ == "Square":
+            dummy_instance = cls(1)  # Create a dummy instance of Square
+
+        dummy_instance.update(**dictionary)  # Update the dummy instance with the actual attribute values
+
+        return dummy_instance
