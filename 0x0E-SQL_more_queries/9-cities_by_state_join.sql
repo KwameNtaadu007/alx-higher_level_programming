@@ -1,9 +1,11 @@
-# This script lists all cities in the database hbtn_0d_usa.
-# Records are sorted in order of ascending cities.id.
+-- Script lists all cities in the database hbtn_0d_usa.
+-- Each record displays:
+-- cities.id - cities.name - states.name
+-- Results are sorted in ascending order using cities.id
+-- Just 1  SELECT statement is allowed
+-- mysql is passed as database name as argument of mysql command
 
-SELECT c.`id`, c.`name`, s.`name`
-  FROM `cities` AS c
-       INNER JOIN `states` AS s
-       ON c.`state_id` = s.`id`
- ORDER BY c.`id`;
-
+SELECT cities.id, cities.name, states.name
+FROM cities
+INNER JOIN states ON cities.state_id=states.id
+ORDER BY cities.id;
