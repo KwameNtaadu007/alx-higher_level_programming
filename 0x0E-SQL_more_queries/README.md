@@ -1,7 +1,6 @@
 # SQL - More queries
 
-In this project, I continued to practicing SQL queries, working with
-permissoins, joins, and constraints.
+In this project, I practiced User creation, permission, NOT NULL and UNIQUE contraints, JOIN, UNION, multiple table data retrieval and KEYS.
 
 ## Usage :dolphin:
 
